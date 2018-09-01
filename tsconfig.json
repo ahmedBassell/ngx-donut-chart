@@ -16,6 +16,20 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngxDonutchart": [
+        "dist/ngx-donutchart"
+      ],
+      "ngxDonutchart/*": [
+        "dist/ngx-donutchart/*"
+      ],
+      "ngxDonutChart": [
+        "dist/ngx-donut-chart"
+      ],
+      "ngxDonutChart/*": [
+        "dist/ngx-donut-chart/*"
+      ]
+    }
   }
 }

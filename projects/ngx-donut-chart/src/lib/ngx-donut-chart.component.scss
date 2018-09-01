@@ -1,0 +1,48 @@
+.c-donutchart {
+  position: relative;
+
+  .c-donutchart__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .c-donutchart__title {
+      font-size: 40px;
+    }
+
+  .c-donutchart__legends {
+    display: flex;
+    justify-content: center;
+  }
+
+    .c-donutchart__legend {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      margin: 16px 8px;
+    }
+
+      .c-donutchart__legend-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        width: 40px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: crimson;
+      }
+
+      .c-donutchart__legend-title {
+        text-align: center;
+      }
+
+      .c-donutchart__legend-percentage {
+        text-align: center;
+      }
+}

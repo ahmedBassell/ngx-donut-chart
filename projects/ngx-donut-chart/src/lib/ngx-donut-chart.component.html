@@ -1,0 +1,47 @@
+<div
+  class="c-donutchart"
+  [ngStyle]="{'width': width}">
+  <svg
+    [ngStyle]="{'width': width, 'height': height}"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- <path [attr.d]="pathD" stroke="black" fill="transparent" stroke-width="8" fill-opacity="0.5"/> -->
+    <path
+      *ngFor="let arc of arcs"
+      [attr.d]="arc.d"
+      [attr.stroke]="arc.color"
+      fill="transparent"
+      [attr.stroke-width]="thickness"
+      fill-opacity="0.5"/>
+  </svg>
+
+  <div
+    class="c-donutchart__text"
+    *ngIf="title"
+    [ngStyle]="{'width': width, 'height': height}">
+    <div
+      [ngClass]="totalClass"
+      [innerText]="total"></div>
+    <div [innerText]="title"></div>
+  </div>
+
+  <div class="c-donutchart__legends">
+    <div
+      class="c-donutchart__legend"
+      *ngFor="let item of data">
+      <div
+        class="c-donutchart__legend-bar"
+        [ngStyle]="{'background-color': item.color}">
+      </div>
+
+      <div
+        class="c-donutchart__legend-title"
+        [innerText]="item.label">
+      </div>
+
+      <div
+        class="c-donutchart__legend-percentage"
+        [innerText]="item.percentage">
+      </div>
+    </div>
+  </div>
+</div>
